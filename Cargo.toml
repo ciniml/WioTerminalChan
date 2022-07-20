@@ -1,0 +1,23 @@
+[package]
+name = "wio_terminal_chan"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wio_terminal = { version = "0.6.1" }
+bitfield = "0.13"
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7"
+panic-halt = "0.2"
+
+[profile.dev]
+incremental = false
+codegen-units = 1
+debug = true
+lto = true
+
+[profile.release]
+lto = true
+opt-level = "s"
