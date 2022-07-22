@@ -5,12 +5,18 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+semihosting = []
+
 [dependencies]
 wio_terminal = { version = "0.6.1" }
 bitfield = "0.13"
 cortex-m = "0.7.3"
 cortex-m-rt = "0.7"
 panic-halt = "0.2"
+embedded-graphics = "0.7.1"
+heapless = "0.7.15"
+panic-semihosting = "0.6.0"
 
 [profile.dev]
 incremental = false

@@ -1,0 +1,26 @@
+[default.probe]
+usb_vid = "6666"
+usb_pid = "4444"
+serial = "xiao-rp2040"
+
+protocol = "Swd"
+speed = 15625
+
+[default.flashing]
+enabled = true
+do_chip_erase = false
+
+[default.reset]
+enabled = true
+#halt_afterwards = true
+
+[default.general]
+chip_descriptions = []
+log_level = "INFO"
+
+[default.rtt]
+enabled = false
+
+[default.gdb]
+enabled = true
+gdb_connection_string = "127.0.0.1:3333"
